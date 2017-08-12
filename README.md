@@ -73,3 +73,11 @@
 - 12.zscore sort value (return value's score)
 - 13.zcount sort scores1 scores2 (count sort by scores1~scores2)
 
+### redis-keys
+- 1.keys * (view all key)
+- 2.keys my? (view all my? key)
+- 3.exists key (is exists? 1:true,0:false)
+- 4.rename key newkey
+- 5.expire key num (set timeout num)
+- 6.ttl key (view timeout num)
+- 7.type key (return key's type)
