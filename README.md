@@ -58,3 +58,18 @@
 - 11.sinterstore set1 set2 set3 (add set2 & set2 altogether values to set1)
 - 12.sunionstore set1 set2 set3 (add merge set2 & set3 values to set1)
 
+### redis-sorted-set
+- 1.zadd sort scores value scores value
+- 2.zcard sort (return sort's size)
+- 3.zrem sort value value (remove)
+- 4.zrang sort start end
+- 5.zrang sort start end withscores (view values's scores)
+- 6.zrevrange sort start end withscores (view values'scores by desc)
+- 7.zremrangebyrank sort start end (remove by index)
+- 8.zremrangebyscore sort scores1 scores2 (remove by scores1~scores2)
+- 9.zrangebyscore sort scores1 scores2 (view sort by scores1~scores2)
+- 10.zrangebyscore sort scores1 scores2 withscores limit start end (view sort by scores1~scores2 for limit start~end)
+- 11.zincrby sort scores value (value's score+3)
+- 12.zscore sort value (return value's score)
+- 13.zcount sort scores1 scores2 (count sort by scores1~scores2)
+
