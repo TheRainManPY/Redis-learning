@@ -101,3 +101,14 @@
 - 4.操作
     + 1）在conf的save下，默认 save:time(900) key(1), save:time(300) key(10)，save:time(60) key(10000)。多少秒内，多少key发生变化，就执行一次持久化。
     + 2）快照文件保存在/var/lib/redis/dump.rbd中。
+
+### redis-AOF
+- 1.概念
+    + 1）将用户的操作保存为appendonly.aof文件，每次redis启动的时候从日志文件中读取。
+- 2.优点
+    + 1）数据安全性比较高
+- 3.缺点
+    + 1）性能比RDB差
+- 4.操作
+    + 1）修改appendonly no为yes，在下面设置持久化方式：appendfsync always 每次修改持久化一次，appendfsync everysec 每秒持久化一次，appendfsync no 不进行持久化。
+    + 2）日志文件保存在/var/lib/redis/appendonly.aof中。
