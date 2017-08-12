@@ -90,3 +90,14 @@
 - 1.multi (open transaction)
 - 2.do somthing...
 - 3.exec:commit,discard:rollback
+
+### redis-AOF
+- 1.概念
+    + 1）根据/etc/redis/redis.conf文件配置的持久化方案，进行数据持久化。
+- 2.优点
+    + 1）保存的是redis的快照文件，方便归档。当系统挂掉可以很快的恢复。
+- 3.缺点
+    + 1）因为是根据时间进行持久化操作的，若在持久化操作前之前系统挂掉，则数据就丢失了。
+- 4.操作
+    + 1）在conf的save下，默认 save:time(900) key(1), save:time(300) key(10)，save:time(60) key(10000)。多少秒内，多少key发生变化，就执行一次持久化。
+    + 2）快照文件保存在/var/lib/redis/dump.rbd中。
