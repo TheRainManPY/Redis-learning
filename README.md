@@ -91,7 +91,7 @@
 - 2.do somthing...
 - 3.exec:commit,discard:rollback
 
-### redis-AOF
+### redis-RDB
 - 1.概念
     + 1）根据/etc/redis/redis.conf文件配置的持久化方案，进行数据持久化。
 - 2.优点
