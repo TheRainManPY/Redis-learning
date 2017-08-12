@@ -81,3 +81,12 @@
 - 5.expire key num (set timeout num)
 - 6.ttl key (view timeout num)
 - 7.type key (return key's type)
+
+### redis-databases
+- 1.select index (max:16)
+- 2.move key database (index)
+
+### redis-Transaction
+- 1.multi (open transaction)
+- 2.do somthing...
+- 3.exec:commit,discard:rollback
